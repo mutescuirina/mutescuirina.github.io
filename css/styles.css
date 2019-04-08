@@ -1,14 +1,11 @@
 body {
-    /* background: url(../img/abstract.jpg) no-repeat;
-    background-size: cover;
-    font-size: 18px; */
+    font-size: 18px;
     
 
 }
 .container { 
-    margin-top: 200px;
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
@@ -19,7 +16,37 @@ body {
     font-weight: 100
 } 
 input {
-    width: 100px;;
+    width: 300px;
+    height: 25px;
+
+
+
 } 
+#favBtn, #passBtn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    /* display: none; */
+    color:white;
+}
+#favBtn {
+    background: green;
+}
+#passBtn {
+    background: red;
+}
+.content {
+    border:black solid 2px;
 
-
+}
+.favorites {
+    border:red solid 2px;
+    
+}
+.favorites {
+    height: 100px;
+}
+.favorites > img {
+width: 50%;
+    
+}
