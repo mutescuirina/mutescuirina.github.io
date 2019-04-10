@@ -1,10 +1,9 @@
-
- //document ready  
+//document ready  
  // fisher yates shuffle
  // https://bost.ocks.org/mike/shuffle/
 
- function shuffle(array) {
-    var m = array.length, t, i;
+ const shuffle = (array) =>  {
+    let m = array.length, t, i;
   
     // While there remain elements to shuffle…
     while (m) {
@@ -31,6 +30,7 @@
     
     const queryData = $.get(queryUrl);
     queryData.done(function(response) { 
+
         shuffle(response.data)
         console.log("success got data", response); 
         queryResponse = response.data[0].images.fixed_height.url;
@@ -53,17 +53,19 @@
 //DOCUMENT READY///////////////////////////////////////////
     $(() => {
 
-//CREATE THE TWO NEW BUTTONS/////
+
 const favBtn = $('#favBtn')
-const passBtn = $('#passBtn')
 const favoriteArr = [];
 
  
-
 const addFavorite = () => {
     let favGify = $('.content_img').children()
     favoriteArr.push(favGify)
+    for (i = 5; i > favoriteArr.length ; i--) {
+        alert('enough');
+    }
     apiData()
+    
     
    
     
@@ -80,14 +82,14 @@ console.log(favoriteArr)
 
 ///CLIKING EVENTS///////////////////////////////////////////////////////////////////////        
 $('#submit').on('click', ()=> {
-    console.log('its working')
-    event.preventDefault()
+    // console.log('its working')
+    event.preventDefault();
     apiData();
+    $('#input').val('');
     
-   
-
-
 })
+
+
 
 $(favBtn).on('click',() => {
     event.preventDefault()
