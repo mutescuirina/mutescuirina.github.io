@@ -25,7 +25,7 @@
         
         let userInput = $('#input').val();
     userInput = userInput.trim().replace(/ /g, "+");
-    const queryUrl = 'http://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=BgZkpbDDpfxjmUaEPwZuc7w8yLfDZZPy&limit=10';
+    const queryUrl = 'http://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=BgZkpbDDpfxjmUaEPwZuc7w8yLfDZZPy&limit=20';
     // console.log(queryUrl)
     
     const queryData = $.get(queryUrl);
@@ -58,6 +58,7 @@
         currentCode.remove();
         
     }
+    
    
 // const showMore = () => {
 //     const content = $('.content')
@@ -67,11 +68,29 @@
 // }
 
 
-//things that i need the button to do 
-// if user pressed on the yes button the current giphy will be added to the emply array
-//if user presses on the no button then the shuffle goes to the next giphy
 
 
+const generateColor = () => {
+
+    let hexValues = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e"];
+    
+    function populate(a) {
+      for ( var i = 0; i < 6; i++ ) {
+        let x = Math.round( Math.random() * 14 );
+        let y = hexValues[x];
+        a += y;
+      }
+      return a;
+    }
+    
+    let newColor1 = populate('#');
+    let newColor2 = populate('#');
+    let angle = Math.round( Math.random() * 360 );
+    
+    let  gradient = "linear-gradient(" + angle + "deg, " + newColor1 + ", " + newColor2 + ")";
+    $('body').css('background', gradient)
+}
+    // document.getElementById("container").style.background = gradient;
 
 //DOCUMENT READY///////////////////////////////////////////
     $(() => {
@@ -81,14 +100,18 @@
      apiData();
      showOneImg();
      $('#next').css('display', "block")
+     
                
  })
+
+ 
             
 
 $('#next').on('click', () => {
     event.preventDefault();
     apiData();
     showOneImg();
+    generateColor();
     
 })
 

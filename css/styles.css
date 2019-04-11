@@ -1,8 +1,8 @@
 body, html {
     font-size: 16px;
     width: 100%;
-    
-    background:linear-gradient(#DB49BD,#8A54EA) ;
+    background:linear-gradient(#DB49BD,#8A54EA, #B54ED3) no-repeat center center;
+    background-size: cover;
     color: #ffffff;
 
 }
@@ -14,6 +14,7 @@ body, html {
     justify-content: center;
     align-content: center;
     align-items: center;
+    margin: auto;
 }
 .top {
     display:flex;
@@ -25,21 +26,25 @@ body, html {
 }
 .top h1 {
     font-family: 'Fjalla One', sans-serif;
-    font-size: 4.5em;
+    font-size: 4em;
     font-kerning: auto;
+    text-transform: uppercase;
     text-align: center;
     margin-bottom: 0;
 
 }
-
+span {
+    text-transform: initial;
+}
 
 .top h4 {
     font-family: 'Nunito', sans-serif;
-    font-size: .9em;
+    font-size: .85em;
     letter-spacing: .1em;
     font-weight: 100;
     text-transform: uppercase;
     text-align: center;
+    margin-top: 0;
 }
 .forms {
     width: 100%;
@@ -49,14 +54,20 @@ body, html {
     justify-content: center;
     align-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 .forms input {
     width: 75%;
     height: 25px;
     border:none;
     font-family: 'Nunito', sans-serif;
-    font: 400 12px system-ui;
+    color: rgba(0,0,0,.8);
+    padding-left: 5px;
+    border-left: .2em;
+    font-size: .8em;
+    font-weight: 100;
+    /* font: 400 12px system-ui; */
+
 }
 
 
@@ -72,15 +83,37 @@ background-size: 30%;
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
     align-items: center;
+    height: 500px;
+    
 
 }
-.content_img {
-    /* height: 400px; */
+
+.embeded_code input {
+    width: 100%;
+    height: 30px;
+    font-family: 'Nunito', sans-serif;
+    color: rgba(0,0,0,.5);
+    font-size: .7em;
+    border-radius: .2em;
+    border: rgba(0,0,0,.5) dotted 1px;
+    margin-bottom: 10px;
 }
 
 #next {
-    display:none;
+    display: none;
+    background: #02E6CB;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1em;
+    color: white;
+    text-transform: uppercase;
+    padding: 8px;
+    font-kerning: auto;
+    border: none;
+    border-radius: .2em;
 }
+
+
+
