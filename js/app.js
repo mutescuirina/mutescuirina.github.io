@@ -25,7 +25,7 @@ const apiData = () => {
 
     let userInput = $('#input').val();
     userInput = userInput.trim().replace(/ /g, "+");
-    const queryUrl = 'http://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=BgZkpbDDpfxjmUaEPwZuc7w8yLfDZZPy&limit=20';
+    const queryUrl = 'https://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=BgZkpbDDpfxjmUaEPwZuc7w8yLfDZZPy&limit=20';
     // console.log(queryUrl)
 
     const queryData = $.get(queryUrl);
