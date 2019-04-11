@@ -1,7 +1,10 @@
 body, html {
     font-size: 16px;
     width: 100%;
-    background:linear-gradient(#DB49BD,#8A54EA, #B54ED3) no-repeat center center;
+    background:linear-gradient(#DB49BD,#8A54EA, #B54ED3) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     color: #ffffff;
     margin: 0px;
@@ -66,13 +69,14 @@ span {
     padding-left: 5px;
     font-size: .85em;
     font-weight: 100;
+    border: 1px solid white;
 
 }
 
 
 #search {
     width: 15%;
-    height:27px;
+    height:29px;
     border: 1px solid white;
     
 background: url(../img/search_icon.png) no-repeat center center;
@@ -171,4 +175,5 @@ height:0;
 [data-tip]:hover:after {
 display:block;
 }
+
 
