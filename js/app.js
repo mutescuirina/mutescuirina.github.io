@@ -84,7 +84,13 @@ const generateColor = () => {
     let angle = Math.round(Math.random() * 360);
 
     let gradient = "linear-gradient(" + angle + "deg, " + newColor1 + ", " + newColor2 + ")";
-    $('body').css('background', gradient)
+    $('html').css('background', gradient);
+    // $('body').css('background', gradient);
+    $('html').css({'background-repeat':'no-repeat','webkit-background-size': 'cover',
+    'moz-background-size':'cover',
+    'o-background-size': 'cover',
+    'background-size': 'cover'});
+    
 }
 
 
