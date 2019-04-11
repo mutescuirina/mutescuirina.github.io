@@ -4,6 +4,7 @@ body, html {
     background:linear-gradient(#DB49BD,#8A54EA, #B54ED3) no-repeat center center;
     background-size: cover;
     color: #ffffff;
+    margin: 0px;
 
 }
 
@@ -63,10 +64,8 @@ span {
     font-family: 'Nunito', sans-serif;
     color: rgba(0,0,0,.8);
     padding-left: 5px;
-    border-left: .2em;
-    font-size: .8em;
+    font-size: .85em;
     font-weight: 100;
-    /* font: 400 12px system-ui; */
 
 }
 
@@ -87,16 +86,29 @@ background-size: 30%;
     align-content: center;
     align-items: center;
     height: 500px;
+    width: 80%;
     
 
 }
+.content_img {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
 
+}
+/* .content_img img {
+    width: 30%;
+} */
 .embeded_code input {
     width: 100%;
     height: 30px;
     font-family: 'Nunito', sans-serif;
     color: rgba(0,0,0,.5);
-    font-size: .7em;
+    font-size: .9em;
     border-radius: .2em;
     border: rgba(0,0,0,.5) dotted 1px;
     margin-bottom: 10px;
@@ -115,5 +127,48 @@ background-size: 30%;
     border-radius: .2em;
 }
 
+[data-tip] {
+position:relative;
+}
 
+[data-tip]:before {
+content: '';
+display: none;
+position:absolute;
+top:30px;
+right:35px;
+z-index: 8;
+font-size:0;
+line-height:0;
+width:0;
+height:0;
+}
+
+[data-tip]:after {
+	background: rgba(0,0,0,.5);
+    display: none;
+    content: attr(data-tip);
+    position: absolute;
+    top: -25px;
+    left: 151px;
+    padding: 5px 8px;
+    color: #fff;
+    z-index: 9;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.7em;
+    /* height: 18px; */
+    line-height: 18px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    white-space: nowrap;
+    word-wrap: normal;
+    border: coral 1px solid;
+}
+
+
+[data-tip]:hover:before,
+[data-tip]:hover:after {
+display:block;
+}
 
